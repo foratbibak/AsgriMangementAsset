@@ -29,6 +29,7 @@ namespace AsgriMangementAsset.AssetForms
 
         private void BindGrid()
         {
+            dgAsset.AutoGenerateColumns = false;
             dgAsset.DataSource = assetRepository.SelectAll();
             dgAsset.Columns[0].Visible = false;
             ConvertDatesToShamsi();
@@ -99,13 +100,13 @@ namespace AsgriMangementAsset.AssetForms
         {
             foreach (DataGridViewRow row in dgAsset.Rows)
             {
-                if (row.Cells["AssetDate"].Value != null && DateTime.TryParse(row.Cells["AssetDate"].Value.ToString(), out DateTime assetDate))
+                if (row.Cells["Date"].Value != null && DateTime.TryParse(row.Cells["Date"].Value.ToString(), out DateTime assetDate))
                 {
-                    row.Cells["AssetDate"].Value = assetDate.ToSahmsi();
+                    row.Cells["Date"].Value = assetDate.ToSahmsi();
                 }
-                if (row.Cells["AssetEditDate"].Value != null && DateTime.TryParse(row.Cells["AssetEditDate"].Value.ToString(), out DateTime AssetEditDate))
+                if (row.Cells["DateEdit"].Value != null && DateTime.TryParse(row.Cells["DateEdit"].Value.ToString(), out DateTime AssetEditDate))
                 {
-                    row.Cells["AssetEditDate"].Value = AssetEditDate.ToSahmsi();
+                    row.Cells["DateEdit"].Value = AssetEditDate.ToSahmsi();
                 }
             }
         }

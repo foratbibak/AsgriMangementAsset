@@ -35,7 +35,13 @@ namespace ManagementDataLayer.Services
                 connection.Close();
             }
         }
-    public bool Insert(string AssetCode, string Status, string AssetTitle, string AssetCompany, string AssetCountry, decimal AssetPrice, string AssetColor, string AssetModel, string AssetSize)
+
+        public DataTable FilterByCountryAndCompany(string Status, string AssetTitle)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Insert(string AssetCode, string Status, string AssetTitle, string AssetCompany, string AssetCountry, decimal AssetPrice, string AssetColor, string AssetModel, string AssetSize)
     {
         OleDbConnection connection = new OleDbConnection(connectionString);
         try
@@ -84,6 +90,7 @@ namespace ManagementDataLayer.Services
             OleDbConnection connection = new OleDbConnection(connectionString);
             OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection);
             adapter.Fill(data);
+
             return data;
         }
 

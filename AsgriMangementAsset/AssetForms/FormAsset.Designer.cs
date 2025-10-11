@@ -35,7 +35,7 @@
             this.btnDelet = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.AssetLableNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AssetCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.وضعیت = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.عنوان = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +45,8 @@
             this.AssetColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AssetModel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AssetSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateEdit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgAsset)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +56,7 @@
             this.dgAsset.AllowUserToDeleteRows = false;
             this.dgAsset.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgAsset.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.AssetLableNumber,
+            this.Number,
             this.AssetCode,
             this.وضعیت,
             this.عنوان,
@@ -63,7 +65,9 @@
             this.AssetPrice,
             this.AssetColor,
             this.AssetModel,
-            this.AssetSize});
+            this.AssetSize,
+            this.Date,
+            this.DateEdit});
             this.dgAsset.Location = new System.Drawing.Point(12, 122);
             this.dgAsset.Name = "dgAsset";
             this.dgAsset.ReadOnly = true;
@@ -128,13 +132,13 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "جستوجو";
             // 
-            // AssetLableNumber
+            // Number
             // 
-            this.AssetLableNumber.DataPropertyName = "AssetLableNumber";
-            this.AssetLableNumber.HeaderText = "AssetLableNumber";
-            this.AssetLableNumber.Name = "AssetLableNumber";
-            this.AssetLableNumber.ReadOnly = true;
-            this.AssetLableNumber.Visible = false;
+            this.Number.DataPropertyName = "AssetLabelNumber";
+            this.Number.HeaderText = "AssetLableNumber";
+            this.Number.Name = "Number";
+            this.Number.ReadOnly = true;
+            this.Number.Visible = false;
             // 
             // AssetCode
             // 
@@ -199,6 +203,20 @@
             this.AssetSize.Name = "AssetSize";
             this.AssetSize.ReadOnly = true;
             // 
+            // Date
+            // 
+            this.Date.DataPropertyName = "AssetDate";
+            this.Date.HeaderText = "تاریخ ثبت";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // DateEdit
+            // 
+            this.DateEdit.DataPropertyName = "AssetEditDate";
+            this.DateEdit.HeaderText = "تاریخ ویرایش";
+            this.DateEdit.Name = "DateEdit";
+            this.DateEdit.ReadOnly = true;
+            // 
             // FormAsset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,7 +248,7 @@
         private System.Windows.Forms.Button btnDelet;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AssetLableNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn AssetCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn وضعیت;
         private System.Windows.Forms.DataGridViewTextBoxColumn عنوان;
@@ -240,5 +258,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AssetColor;
         private System.Windows.Forms.DataGridViewTextBoxColumn AssetModel;
         private System.Windows.Forms.DataGridViewTextBoxColumn AssetSize;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateEdit;
     }
 }
