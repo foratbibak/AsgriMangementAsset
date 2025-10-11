@@ -21,12 +21,28 @@ namespace AsgriMangementAsset.AssetForms
             InitializeComponent();
             assetRepository = new  AssetRepository();
         }
-
         private void FormAsset_Load(object sender, EventArgs e)
         {
+            DataTable dtTitle = assetRepository.SelectAll().DefaultView.ToTable(true, "AssetTitle");
+            cmbTitle.Items.Clear();
+            cmbTitle.Items.Add("مقدار مورد نظر را انتخاب کنید");
+            foreach (DataRow row in dtTitle.Rows)
+            {
+                cmbTitle.Items.Add(row["AssetTitle"].ToString());
+            }
+            cmbTitle.SelectedIndex = 0;
             BindGrid();
         }
+        private void FilterGrid()
+        {
+            string Title = cmbTitle.Text;
 
+            if (Title != "مقدار مورد نظر را انتخاب کنید")
+            {
+                dgAsset.DataSource = assetRepository.Filter(Title);
+                ConvertDatesToShamsi();
+            }
+        }
         private void BindGrid()
         {
             dgAsset.AutoGenerateColumns = false;
@@ -43,7 +59,7 @@ namespace AsgriMangementAsset.AssetForms
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-
+            BindGrid();
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -111,5 +127,41 @@ namespace AsgriMangementAsset.AssetForms
             }
         }
 
+        private void cmbTitle_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FilterGrid();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("AssetCode");
+            dt.Columns.Add("Status");
+            dt.Columns.Add("AssetTitle");
+            dt.Columns.Add("AssetCompany");
+            dt.Columns.Add("AssetCountry");
+            dt.Columns.Add("AssetPrice");
+            dt.Columns.Add("AssetColor");
+            dt.Columns.Add("AssetModel");
+            dt.Columns.Add("AssetSize");
+
+            foreach (DataGridViewRow item in dgAsset.Rows)
+            {
+                dt.Rows.Add(
+                    item.Cells[1].Value.ToString(),
+                    item.Cells[2].Value.ToString(),
+                    item.Cells[3].Value.ToString(),
+                    item.Cells[4].Value.ToString(),
+                    item.Cells[5].Value.ToString(),
+                    item.Cells[6].Value.ToString(),
+                    item.Cells[7].Value.ToString(),
+                    item.Cells[8].Value.ToString(),
+                    item.Cells[9].Value.ToString()
+                    );
+            }
+            stiReports.Load(Application.StartupPath + "/Report.mrt");
+            stiReports.RegData("DT", dt);
+            stiReports.Show();
+        }
     }
 }

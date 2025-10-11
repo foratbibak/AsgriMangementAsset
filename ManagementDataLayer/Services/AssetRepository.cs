@@ -36,11 +36,29 @@ namespace ManagementDataLayer.Services
             }
         }
 
-        public DataTable FilterByCountryAndCompany(string Status, string AssetTitle)
+        public DataTable Filter(string AssetTitle)
         {
-            throw new NotImplementedException();
+            OleDbConnection connection = new OleDbConnection(connectionString);
+            try
+            {
+                string query = "Select * From Property Where AssetTitle = @Title";
+                OleDbCommand command = new OleDbCommand(query, connection);
+                command.Parameters.AddWithValue("@Title", AssetTitle);
+                OleDbDataAdapter adapter = new OleDbDataAdapter(command);
+                DataTable dt = new DataTable();
+                connection.Open();
+                adapter.Fill(dt);
+                return dt;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
-
         public bool Insert(string AssetCode, string Status, string AssetTitle, string AssetCompany, string AssetCountry, decimal AssetPrice, string AssetColor, string AssetModel, string AssetSize)
     {
         OleDbConnection connection = new OleDbConnection(connectionString);

@@ -28,13 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAsset));
             this.dgAsset = new System.Windows.Forms.DataGridView();
-            this.btnInsert = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDelet = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AssetCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.وضعیت = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +43,16 @@
             this.AssetSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateEdit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnInsert = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDelet = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbTitle = new System.Windows.Forms.ComboBox();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.customValidator1 = new ValidationComponents.CustomValidator(this.components);
+            this.stiReports = new Stimulsoft.Report.StiReport();
             ((System.ComponentModel.ISupportInitialize)(this.dgAsset)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,63 +80,6 @@
             this.dgAsset.Size = new System.Drawing.Size(753, 304);
             this.dgAsset.TabIndex = 0;
             this.dgAsset.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgAsset_CellContentClick);
-            // 
-            // btnInsert
-            // 
-            this.btnInsert.Location = new System.Drawing.Point(672, 12);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(93, 34);
-            this.btnInsert.TabIndex = 1;
-            this.btnInsert.Text = " افزودن اموال";
-            this.btnInsert.UseVisualStyleBackColor = true;
-            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(376, 12);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(93, 34);
-            this.btnRefresh.TabIndex = 2;
-            this.btnRefresh.Text = "بروز رسانی";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(574, 12);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(93, 34);
-            this.btnEdit.TabIndex = 3;
-            this.btnEdit.Text = "ویرایش اموال";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btnDelet
-            // 
-            this.btnDelet.Location = new System.Drawing.Point(475, 12);
-            this.btnDelet.Name = "btnDelet";
-            this.btnDelet.Size = new System.Drawing.Size(93, 34);
-            this.btnDelet.TabIndex = 4;
-            this.btnDelet.Text = "حذف اموال";
-            this.btnDelet.UseVisualStyleBackColor = true;
-            this.btnDelet.Click += new System.EventHandler(this.btnDelet_Click);
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(417, 81);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(250, 20);
-            this.txtSearch.TabIndex = 5;
-            this.txtSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(709, 88);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "جستوجو";
             // 
             // Number
             // 
@@ -217,11 +166,118 @@
             this.DateEdit.Name = "DateEdit";
             this.DateEdit.ReadOnly = true;
             // 
+            // btnInsert
+            // 
+            this.btnInsert.Location = new System.Drawing.Point(672, 12);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(93, 34);
+            this.btnInsert.TabIndex = 1;
+            this.btnInsert.Text = " افزودن اموال";
+            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(376, 12);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(93, 34);
+            this.btnRefresh.TabIndex = 2;
+            this.btnRefresh.Text = "بروز رسانی";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(574, 12);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(93, 34);
+            this.btnEdit.TabIndex = 3;
+            this.btnEdit.Text = "ویرایش اموال";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnDelet
+            // 
+            this.btnDelet.Location = new System.Drawing.Point(475, 12);
+            this.btnDelet.Name = "btnDelet";
+            this.btnDelet.Size = new System.Drawing.Size(93, 34);
+            this.btnDelet.TabIndex = 4;
+            this.btnDelet.Text = "حذف اموال";
+            this.btnDelet.UseVisualStyleBackColor = true;
+            this.btnDelet.Click += new System.EventHandler(this.btnDelet_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(417, 81);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(250, 20);
+            this.txtSearch.TabIndex = 5;
+            this.txtSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(709, 88);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "جستوجو";
+            // 
+            // cmbTitle
+            // 
+            this.cmbTitle.FormattingEnabled = true;
+            this.cmbTitle.Location = new System.Drawing.Point(246, 81);
+            this.cmbTitle.Name = "cmbTitle";
+            this.cmbTitle.Size = new System.Drawing.Size(151, 21);
+            this.cmbTitle.TabIndex = 7;
+            this.cmbTitle.SelectedIndexChanged += new System.EventHandler(this.cmbTitle_SelectedIndexChanged);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Location = new System.Drawing.Point(277, 12);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(93, 34);
+            this.btnPrint.TabIndex = 8;
+            this.btnPrint.Text = "چاپ";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // customValidator1
+            // 
+            this.customValidator1.CancelFocusChangeWhenInvalid = false;
+            this.customValidator1.ControlToValidate = null;
+            this.customValidator1.ErrorMessage = null;
+            this.customValidator1.Icon = ((System.Drawing.Icon)(resources.GetObject("customValidator1.Icon")));
+            this.customValidator1.IsValidated = false;
+            // 
+            // stiReports
+            // 
+            this.stiReports.CookieContainer = null;
+            this.stiReports.EngineVersion = Stimulsoft.Report.Engine.StiEngineVersion.EngineV2;
+            this.stiReports.ReferencedAssemblies = new string[] {
+        "System.Dll",
+        "System.Drawing.Dll",
+        "System.Windows.Forms.Dll",
+        "System.Data.Dll",
+        "System.Xml.Dll",
+        "Stimulsoft.Controls.Dll",
+        "Stimulsoft.Base.Dll",
+        "Stimulsoft.Report.Dll"};
+            this.stiReports.ReportAlias = "Report";
+            this.stiReports.ReportGuid = "5f288a55e6934035865455bba6c9ca0a";
+            this.stiReports.ReportName = "Report";
+            this.stiReports.ReportSource = null;
+            this.stiReports.ReportUnit = Stimulsoft.Report.StiReportUnitType.Inches;
+            this.stiReports.ScriptLanguage = Stimulsoft.Report.StiReportLanguageType.CSharp;
+            this.stiReports.UseProgressInThread = false;
+            // 
             // FormAsset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 438);
+            this.Controls.Add(this.btnPrint);
+            this.Controls.Add(this.cmbTitle);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnDelet);
@@ -260,5 +316,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AssetSize;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateEdit;
+        private System.Windows.Forms.ComboBox cmbTitle;
+        private System.Windows.Forms.Button btnPrint;
+        private ValidationComponents.CustomValidator customValidator1;
+        private Stimulsoft.Report.StiReport stiReports;
     }
 }

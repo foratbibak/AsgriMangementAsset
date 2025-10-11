@@ -59,5 +59,35 @@ namespace AsgriMangementAsset.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_10_11_175213 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2025-10-11 175213", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_10_11_175236 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2025-10-11 175236", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_10_11_175439 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2025-10-11 175439", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
