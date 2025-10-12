@@ -144,6 +144,9 @@ namespace AsgriMangementAsset.AssetForms
             dt.Columns.Add("AssetColor");
             dt.Columns.Add("AssetModel");
             dt.Columns.Add("AssetSize");
+            dt.Columns.Add("AssetDate");
+            dt.Columns.Add("AssetEditDate");
+
 
             foreach (DataGridViewRow item in dgAsset.Rows)
             {
@@ -156,7 +159,9 @@ namespace AsgriMangementAsset.AssetForms
                     item.Cells[6].Value.ToString(),
                     item.Cells[7].Value.ToString(),
                     item.Cells[8].Value.ToString(),
-                    item.Cells[9].Value.ToString()
+                    item.Cells[9].Value.ToString(),
+                    item.Cells[10].Value.ToString(),
+                    item.Cells[11].Value.ToString()
                     );
             }
             stiReports.Load(Application.StartupPath + "/Report.mrt");
