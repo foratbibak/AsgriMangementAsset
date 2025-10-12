@@ -46,7 +46,9 @@
     <Compile Include="Context\UnitofWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\IAssetRepository.cs" />
+    <Compile Include="Repositories\ILoginRepository.cs" />
     <Compile Include="Services\AssetRepository.cs" />
+    <Compile Include="Services\LoginRepository.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

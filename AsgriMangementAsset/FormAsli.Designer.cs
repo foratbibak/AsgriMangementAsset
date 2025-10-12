@@ -36,9 +36,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(478, 20);
+            this.button1.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.button1.Location = new System.Drawing.Point(476, 20);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(96, 47);
             this.button1.TabIndex = 1;
             this.button1.Text = "ثبت اموال ";
             this.button1.UseVisualStyleBackColor = true;

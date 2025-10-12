@@ -53,7 +53,9 @@
             this.btnPrint = new System.Windows.Forms.Button();
             this.customValidator1 = new ValidationComponents.CustomValidator(this.components);
             this.stiReports = new Stimulsoft.Report.StiReport();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgAsset)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgAsset
@@ -74,10 +76,10 @@
             this.AssetSize,
             this.Date,
             this.DateEdit});
-            this.dgAsset.Location = new System.Drawing.Point(12, 122);
+            this.dgAsset.Location = new System.Drawing.Point(6, 19);
             this.dgAsset.Name = "dgAsset";
             this.dgAsset.ReadOnly = true;
-            this.dgAsset.Size = new System.Drawing.Size(753, 304);
+            this.dgAsset.Size = new System.Drawing.Size(764, 318);
             this.dgAsset.TabIndex = 0;
             this.dgAsset.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgAsset_CellContentClick);
             // 
@@ -271,11 +273,23 @@
             this.stiReports.ScriptLanguage = Stimulsoft.Report.StiReportLanguageType.CSharp;
             this.stiReports.UseProgressInThread = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgAsset);
+            this.groupBox1.Location = new System.Drawing.Point(12, 143);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(778, 343);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // FormAsset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 438);
+            this.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.ClientSize = new System.Drawing.Size(794, 492);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.cmbTitle);
             this.Controls.Add(this.label1);
@@ -284,12 +298,14 @@
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnInsert);
-            this.Controls.Add(this.dgAsset);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormAsset";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ثبت اموال";
             this.Load += new System.EventHandler(this.FormAsset_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgAsset)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,5 +336,6 @@
         private System.Windows.Forms.Button btnPrint;
         private ValidationComponents.CustomValidator customValidator1;
         private Stimulsoft.Report.StiReport stiReports;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
