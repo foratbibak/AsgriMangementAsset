@@ -9,37 +9,32 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManagementDataLayer.Repositories;
 using ManagementDataLayer.Services;
-using ValidationComponents;
 using static System.Runtime.CompilerServices.RuntimeHelpers;
+using ValidationComponents;
 
 namespace AsgriMangementAsset.AssetForms
 {
-    public partial class frmAddoredit : Form
+    public partial class FrmAddorEdit : Form
     {
         IAssetRepository assetRepository;
         public int AssetLableNumber = 0;
-        public frmAddoredit()
+        public FrmAddorEdit()
         {
             assetRepository = new AssetRepository();
+
             InitializeComponent();
         }
 
-        private void lblAddress_Click(object sender, EventArgs e)
+        private void FrmAdd_Load(object sender, EventArgs e)
         {
+            txTitle.Focus();
 
-        }
-
-        private void frmAddoredit_Load(object sender, EventArgs e)
-        {
-            txtnumric.Maximum = decimal.MaxValue;
             if (AssetLableNumber == 0)
             {
-                btnEdit.Hide();
                 this.Text = "افزودن اموال";
             }
             else
             {
-                btnsabt.Hide();
                 this.Text = "ویرایش اموال";
                 DataTable dt = assetRepository.SelectRow(AssetLableNumber);
                 txTitle.Text = dt.Rows[0][3].ToString();
@@ -55,9 +50,8 @@ namespace AsgriMangementAsset.AssetForms
             }
         }
 
-        private void btnsabt_Click(object sender, EventArgs e)
+        private void textBox4_TextChanged(object sender, EventArgs e)
         {
-
 
         }
 
@@ -66,26 +60,35 @@ namespace AsgriMangementAsset.AssetForms
 
         }
 
-        private void txTitle_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtnumric_Leave(object sender, EventArgs e)
-        {
-        }
-
         private void txtnumric_ValueChanged(object sender, EventArgs e)
         {
-            txtnumric.Text = string.Format("{0:N0}", txtnumric.Value);
+        }
+
+        private void btnsabt_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+
             if (BaseValidator.IsFormValid(this.components))
             {
-                bool isSuccses = assetRepository.Insert(txtCode.Text, txtStatus.Text, txTitle.Text, txtCompany.Text, txtCountry.Text, (decimal)txtnumric.Value, txtColor.Text, txtModel.Text, txtSize.Text);
-   
+                if (!string.IsNullOrWhiteSpace(txtnumric.Text) && !decimal.TryParse(txtnumric.Text, out _))
+                {
+                    RtlMessageBox.Show("لطفا ارزش اموال را فقط به صورت عدد وارد فرمایید.", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtnumric.Focus();
+                    return;
+                }
+                bool isSuccses;
+                if (AssetLableNumber == 0)
+                {
+                    isSuccses = assetRepository.Insert(txtCode.Text, txtStatus.Text, txTitle.Text, txtCompany.Text, txtCountry.Text,txtnumric.Text, txtColor.Text, txtModel.Text, txtSize.Text);
+                }
+                else
+                {
+                    isSuccses = assetRepository.Update(AssetLableNumber, txtCode.Text, txtStatus.Text, txTitle.Text, txtCompany.Text, txtCountry.Text, txtnumric.Text, txtColor.Text, txtModel.Text, txtSize.Text);
+                }
                 if (isSuccses == true)
                 {
                     RtlMessageBox.Show("عملیات با موفق آمیز ثبت شد.", "توجه", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -100,23 +103,19 @@ namespace AsgriMangementAsset.AssetForms
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-           bool isSuccses = assetRepository.Update(AssetLableNumber, txtCode.Text, txtStatus.Text, txTitle.Text, txtCompany.Text, txtCountry.Text, (decimal)txtnumric.Value, txtColor.Text, txtModel.Text, txtSize.Text);
-
-            if (isSuccses == true)
-            {
-                RtlMessageBox.Show("عملیا ویرایش با موفقیت آمیز انجام شد.", "توجه", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DialogResult = DialogResult.OK;
-            }
-            else
-            {
-                RtlMessageBox.Show("عملیات ویرایش  با شکست مواجه شد.", "توجه", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
 
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void txTitle_TextChanged(object sender, EventArgs e)
         {
-            this.Close();
+            txTitle.Focus();
+
         }
     }
 }
+
+
+
+
+
+

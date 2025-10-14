@@ -16,7 +16,7 @@ namespace AsgriMangementAsset
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormAsli());
+            Application.Run(new frmLogin());
         }
     }
 }

@@ -9,13 +9,15 @@ namespace ManagementDataLayer.Repositories
 {
     public interface IAssetRepository
     {
+        DataTable FilterReport(string frommDate, string tooDate);
         DataTable SelectAll();
         DataTable SelectRow(int id);
         DataTable Search(string parameter);
-        DataTable Filter(string AssetTitle);
-        bool Insert(string AssetCode, string Status, string AssetTitle, string AssetCompany, string AssetCountry, decimal AssetPrice, string AssetColor, string AssetModel, string AssetSize);
-        bool Update(int AssetLabelNumber,string AssetCode, string Status, string AssetTitle, string AssetCompany, string AssetCountry, decimal AssetPrice, string AssetColor, string AssetModel, string AssetSize);
+        DataTable Filter(string AssetCode);
+        bool Insert(string AssetCode, string Status, string AssetTitle, string AssetCompany, string AssetCountry, string AssetPrice, string AssetColor, string AssetModel, string AssetSize);
+        bool Update(int AssetLabelNumber,string AssetCode, string Status, string AssetTitle, string AssetCompany, string AssetCountry, string AssetPrice, string AssetColor, string AssetModel, string AssetSize);
         bool Delete(int AssetLabelNumber);
+
     }
 }
 

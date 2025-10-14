@@ -45,6 +45,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
       <HintPath>..\..\..\..\Downloads\Bunifu.UI.Form.1._9.0.1_YasDL.com\Bunifu.UI.Form.1.﻿9.0.1_YasDL.com\Bunifu UI WinForms 1.9.0.1\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>..\..\..\..\Downloads\Bunifu.UI.Form.1._9.0.1_YasDL.com\Bunifu.UI.Form.1.﻿9.0.1_YasDL.com\Bunifu UI WinForms 1.9.0.1\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
       <HintPath>..\..\..\..\Downloads\Bunifu.UI.Form.1._9.0.1_YasDL.com\Bunifu.UI.Form.1.﻿9.0.1_YasDL.com\Bunifu UI WinForms 1.9.0.1\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
     </Reference>
@@ -90,11 +93,23 @@
     <Compile Include="AssetForms\FormAsset.Designer.cs">
       <DependentUpon>FormAsset.cs</DependentUpon>
     </Compile>
-    <Compile Include="AssetForms\frmAddoredit.cs">
+    <Compile Include="AssetForms\FrmAddorEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AssetForms\frmAddoredit.Designer.cs">
-      <DependentUpon>frmAddoredit.cs</DependentUpon>
+    <Compile Include="AssetForms\FrmAddorEdit.Designer.cs">
+      <DependentUpon>FrmAddorEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginManagement.Designer.cs">
+      <DependentUpon>LoginManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAsli.cs">
       <SubType>Form</SubType>
@@ -143,14 +158,20 @@
     <EmbeddedResource Include="AssetForms\FormAsset.resx">
       <DependentUpon>FormAsset.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AssetForms\frmAddoredit.resx">
-      <DependentUpon>frmAddoredit.cs</DependentUpon>
+    <EmbeddedResource Include="AssetForms\FrmAddorEdit.resx">
+      <DependentUpon>FrmAddorEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAsli.resx">
       <DependentUpon>FormAsli.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginManagement.resx">
+      <DependentUpon>LoginManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

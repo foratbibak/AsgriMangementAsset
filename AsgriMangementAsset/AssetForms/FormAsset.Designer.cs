@@ -51,11 +51,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmbTitle = new System.Windows.Forms.ComboBox();
             this.btnPrint = new System.Windows.Forms.Button();
-            this.customValidator1 = new ValidationComponents.CustomValidator(this.components);
             this.stiReports = new Stimulsoft.Report.StiReport();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.customValidator1 = new ValidationComponents.CustomValidator(this.components);
+            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgAsset)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgAsset
@@ -76,10 +86,11 @@
             this.AssetSize,
             this.Date,
             this.DateEdit});
-            this.dgAsset.Location = new System.Drawing.Point(6, 19);
+            this.dgAsset.Location = new System.Drawing.Point(7, 24);
+            this.dgAsset.Margin = new System.Windows.Forms.Padding(4);
             this.dgAsset.Name = "dgAsset";
             this.dgAsset.ReadOnly = true;
-            this.dgAsset.Size = new System.Drawing.Size(764, 318);
+            this.dgAsset.Size = new System.Drawing.Size(918, 371);
             this.dgAsset.TabIndex = 0;
             this.dgAsset.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgAsset_CellContentClick);
             // 
@@ -118,6 +129,7 @@
             this.AssetCompany.HeaderText = "شرکت سازنده";
             this.AssetCompany.Name = "AssetCompany";
             this.AssetCompany.ReadOnly = true;
+            this.AssetCompany.Width = 120;
             // 
             // AssetCountry
             // 
@@ -125,6 +137,7 @@
             this.AssetCountry.HeaderText = "کشور سازنده";
             this.AssetCountry.Name = "AssetCountry";
             this.AssetCountry.ReadOnly = true;
+            this.AssetCountry.Width = 120;
             // 
             // AssetPrice
             // 
@@ -170,9 +183,10 @@
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(672, 12);
+            this.btnInsert.Location = new System.Drawing.Point(692, 18);
+            this.btnInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(93, 34);
+            this.btnInsert.Size = new System.Drawing.Size(108, 42);
             this.btnInsert.TabIndex = 1;
             this.btnInsert.Text = " افزودن اموال";
             this.btnInsert.UseVisualStyleBackColor = true;
@@ -180,9 +194,10 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(376, 12);
+            this.btnRefresh.Location = new System.Drawing.Point(297, 18);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(93, 34);
+            this.btnRefresh.Size = new System.Drawing.Size(108, 42);
             this.btnRefresh.TabIndex = 2;
             this.btnRefresh.Text = "بروز رسانی";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -190,9 +205,10 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(574, 12);
+            this.btnEdit.Location = new System.Drawing.Point(563, 18);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(93, 34);
+            this.btnEdit.Size = new System.Drawing.Size(108, 42);
             this.btnEdit.TabIndex = 3;
             this.btnEdit.Text = "ویرایش اموال";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -200,9 +216,10 @@
             // 
             // btnDelet
             // 
-            this.btnDelet.Location = new System.Drawing.Point(475, 12);
+            this.btnDelet.Location = new System.Drawing.Point(430, 18);
+            this.btnDelet.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelet.Name = "btnDelet";
-            this.btnDelet.Size = new System.Drawing.Size(93, 34);
+            this.btnDelet.Size = new System.Drawing.Size(108, 42);
             this.btnDelet.TabIndex = 4;
             this.btnDelet.Text = "حذف اموال";
             this.btnDelet.UseVisualStyleBackColor = true;
@@ -210,47 +227,44 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(417, 81);
+            this.txtSearch.Location = new System.Drawing.Point(247, 29);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(250, 20);
+            this.txtSearch.Size = new System.Drawing.Size(215, 23);
             this.txtSearch.TabIndex = 5;
             this.txtSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(709, 88);
+            this.label1.Location = new System.Drawing.Point(470, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.Size = new System.Drawing.Size(65, 16);
             this.label1.TabIndex = 6;
-            this.label1.Text = "جستوجو";
+            this.label1.Text = "جستوجو :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cmbTitle
             // 
             this.cmbTitle.FormattingEnabled = true;
-            this.cmbTitle.Location = new System.Drawing.Point(246, 81);
+            this.cmbTitle.Location = new System.Drawing.Point(28, 28);
+            this.cmbTitle.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTitle.Name = "cmbTitle";
-            this.cmbTitle.Size = new System.Drawing.Size(151, 21);
+            this.cmbTitle.Size = new System.Drawing.Size(200, 24);
             this.cmbTitle.TabIndex = 7;
             this.cmbTitle.SelectedIndexChanged += new System.EventHandler(this.cmbTitle_SelectedIndexChanged);
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(277, 12);
+            this.btnPrint.Location = new System.Drawing.Point(150, 18);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(93, 34);
+            this.btnPrint.Size = new System.Drawing.Size(108, 42);
             this.btnPrint.TabIndex = 8;
             this.btnPrint.Text = "چاپ";
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
-            // customValidator1
-            // 
-            this.customValidator1.CancelFocusChangeWhenInvalid = false;
-            this.customValidator1.ControlToValidate = null;
-            this.customValidator1.ErrorMessage = null;
-            this.customValidator1.Icon = ((System.Drawing.Icon)(resources.GetObject("customValidator1.Icon")));
-            this.customValidator1.IsValidated = false;
             // 
             // stiReports
             // 
@@ -276,29 +290,131 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgAsset);
-            this.groupBox1.Location = new System.Drawing.Point(12, 143);
+            this.groupBox1.Location = new System.Drawing.Point(9, 176);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(778, 343);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(933, 403);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "موجودی اموال ";
+            this.groupBox1.UseCompatibleTextRendering = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.txtSearch);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.cmbTitle);
+            this.groupBox2.Location = new System.Drawing.Point(393, 88);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(541, 70);
+            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "فیلتر جدول ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(54, 10);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 16);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "فیلتر بر اساس کد اموال ";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnEdit);
+            this.groupBox3.Controls.Add(this.btnInsert);
+            this.groupBox3.Controls.Add(this.btnRefresh);
+            this.groupBox3.Controls.Add(this.btnPrint);
+            this.groupBox3.Controls.Add(this.btnDelet);
+            this.groupBox3.Location = new System.Drawing.Point(16, 12);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(918, 70);
+            this.groupBox3.TabIndex = 11;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "فیلتر جدول ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label3.Location = new System.Drawing.Point(756, 583);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(188, 16);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "ساخته شده توسط  فرات بی باک";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.CursorType = null;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe Script", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.bunifuLabel1.Location = new System.Drawing.Point(77, 104);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.bunifuLabel1.Size = new System.Drawing.Size(219, 36);
+            this.bunifuLabel1.TabIndex = 15;
+            this.bunifuLabel1.Text = "هنرستان شهید عسگری";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label4.Location = new System.Drawing.Point(589, 584);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(173, 16);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "از گروه مهندسی شارپ آی تی";
+            // 
+            // customValidator1
+            // 
+            this.customValidator1.CancelFocusChangeWhenInvalid = false;
+            this.customValidator1.ControlToValidate = null;
+            this.customValidator1.ErrorMessage = null;
+            this.customValidator1.Icon = ((System.Drawing.Icon)(resources.GetObject("customValidator1.Icon")));
+            this.customValidator1.IsValidated = false;
+            // 
+            // bunifuLabel4
+            // 
+            this.bunifuLabel4.AutoEllipsis = false;
+            this.bunifuLabel4.CursorType = null;
+            this.bunifuLabel4.Font = new System.Drawing.Font("Freestyle Script", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel4.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.bunifuLabel4.Location = new System.Drawing.Point(9, 578);
+            this.bunifuLabel4.Name = "bunifuLabel4";
+            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.bunifuLabel4.Size = new System.Drawing.Size(78, 23);
+            this.bunifuLabel4.TabIndex = 20;
+            this.bunifuLabel4.Text = "SharpITGroup";
+            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // FormAsset
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(794, 492);
+            this.ClientSize = new System.Drawing.Size(947, 602);
+            this.Controls.Add(this.bunifuLabel4);
+            this.Controls.Add(this.bunifuLabel1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnPrint);
-            this.Controls.Add(this.cmbTitle);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.btnDelet);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnInsert);
+            this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAsset";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -306,6 +422,9 @@
             this.Load += new System.EventHandler(this.FormAsset_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgAsset)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,6 +439,11 @@
         private System.Windows.Forms.Button btnDelet;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbTitle;
+        private System.Windows.Forms.Button btnPrint;
+        private ValidationComponents.CustomValidator customValidator1;
+        private Stimulsoft.Report.StiReport stiReports;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn AssetCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn وضعیت;
@@ -332,10 +456,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AssetSize;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateEdit;
-        private System.Windows.Forms.ComboBox cmbTitle;
-        private System.Windows.Forms.Button btnPrint;
-        private ValidationComponents.CustomValidator customValidator1;
-        private Stimulsoft.Report.StiReport stiReports;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label3;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private System.Windows.Forms.Label label4;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
     }
 }

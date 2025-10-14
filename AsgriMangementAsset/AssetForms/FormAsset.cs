@@ -23,12 +23,12 @@ namespace AsgriMangementAsset.AssetForms
         }
         private void FormAsset_Load(object sender, EventArgs e)
         {
-            DataTable dtTitle = assetRepository.SelectAll().DefaultView.ToTable(true, "AssetTitle");
+            DataTable dtTitle = assetRepository.SelectAll().DefaultView.ToTable(true, "AssetCode");
             cmbTitle.Items.Clear();
             cmbTitle.Items.Add("مقدار مورد نظر را انتخاب کنید");
             foreach (DataRow row in dtTitle.Rows)
             {
-                cmbTitle.Items.Add(row["AssetTitle"].ToString());
+                cmbTitle.Items.Add(row["AssetCode"].ToString());
             }
             cmbTitle.SelectedIndex = 0;
             BindGrid();
@@ -64,7 +64,7 @@ namespace AsgriMangementAsset.AssetForms
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            frmAddoredit frm = new frmAddoredit();
+            FrmAddorEdit frm = new FrmAddorEdit();
             frm.ShowDialog();
             if (frm.DialogResult == DialogResult.OK)
             {
@@ -98,9 +98,9 @@ namespace AsgriMangementAsset.AssetForms
                 string Code = dgAsset.CurrentRow.Cells[1].Value.ToString();
                 string Title = dgAsset.CurrentRow.Cells[3].Value.ToString();
                 int AssetLabelNumber = int.Parse(dgAsset.CurrentRow.Cells[0].Value.ToString());
-                frmAddoredit frmEdit = new frmAddoredit();
+                FrmAddorEdit frmEdit = new FrmAddorEdit();
                 frmEdit.AssetLableNumber = AssetLabelNumber;
-                if (RtlMessageBox.Show($"آیا از حذف امول با کد   {Code}   و با عنوان   {Title}   مطمئن هستید.", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (RtlMessageBox.Show($"آیا از ویرایش امول با کد   {Code}   و با عنوان   {Title}   مطمئن هستید.", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     frmEdit.ShowDialog();
                     BindGrid();
@@ -167,6 +167,16 @@ namespace AsgriMangementAsset.AssetForms
             stiReports.Load(Application.StartupPath + "/Report.mrt");
             stiReports.RegData("DT", dt);
             stiReports.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
