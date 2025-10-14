@@ -41,6 +41,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txTitle = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtnumric = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtSize = new System.Windows.Forms.TextBox();
@@ -55,7 +56,7 @@
             this.requiredFieldValidator1 = new ValidationComponents.RequiredFieldValidator(this.components);
             this.requiredFieldValidator2 = new ValidationComponents.RequiredFieldValidator(this.components);
             this.requiredFieldValidator3 = new ValidationComponents.RequiredFieldValidator(this.components);
-            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.requiredFieldValidator4 = new ValidationComponents.RequiredFieldValidator(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -186,6 +187,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ثبت اطلاعات اموال ";
             // 
+            // bunifuLabel4
+            // 
+            this.bunifuLabel4.AutoEllipsis = false;
+            this.bunifuLabel4.CursorType = null;
+            this.bunifuLabel4.Font = new System.Drawing.Font("Freestyle Script", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel4.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.bunifuLabel4.Location = new System.Drawing.Point(-1, 175);
+            this.bunifuLabel4.Name = "bunifuLabel4";
+            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.bunifuLabel4.Size = new System.Drawing.Size(78, 23);
+            this.bunifuLabel4.TabIndex = 79;
+            this.bunifuLabel4.Text = "SharpITGroup";
+            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // txtnumric
             // 
             this.txtnumric.Location = new System.Drawing.Point(10, 81);
@@ -299,20 +315,12 @@
             this.requiredFieldValidator3.ErrorMessage = "لطفا کد اموال را وارد فرمایید";
             this.requiredFieldValidator3.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator3.Icon")));
             // 
-            // bunifuLabel4
+            // requiredFieldValidator4
             // 
-            this.bunifuLabel4.AutoEllipsis = false;
-            this.bunifuLabel4.CursorType = null;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Freestyle Script", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel4.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bunifuLabel4.Location = new System.Drawing.Point(-1, 175);
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuLabel4.Size = new System.Drawing.Size(78, 23);
-            this.bunifuLabel4.TabIndex = 79;
-            this.bunifuLabel4.Text = "SharpITGroup";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.requiredFieldValidator4.CancelFocusChangeWhenInvalid = false;
+            this.requiredFieldValidator4.ControlToValidate = this.txtnumric;
+            this.requiredFieldValidator4.ErrorMessage = "لطفا قیمت اموال را  وارد فرمایید";
+            this.requiredFieldValidator4.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator4.Icon")));
             // 
             // FrmAddorEdit
             // 
@@ -364,5 +372,6 @@
         private ValidationComponents.RequiredFieldValidator requiredFieldValidator3;
         private System.Windows.Forms.TextBox txtnumric;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
+        private ValidationComponents.RequiredFieldValidator requiredFieldValidator4;
     }
 }
