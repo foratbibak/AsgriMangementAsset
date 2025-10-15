@@ -358,6 +358,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmReports";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmReports";
             this.Load += new System.EventHandler(this.frmReports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReports)).EndInit();

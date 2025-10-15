@@ -73,6 +73,7 @@
             // 
             this.dgLogin.AllowUserToAddRows = false;
             this.dgLogin.AllowUserToDeleteRows = false;
+            this.dgLogin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgLogin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgLogin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UserId,
