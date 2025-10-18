@@ -58,10 +58,8 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.customValidator1 = new ValidationComponents.CustomValidator(this.components);
-            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgAsset)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -349,20 +347,6 @@
             this.label3.Text = "ساخته شده توسط  فرات بی باک";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = null;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe Script", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bunifuLabel1.Location = new System.Drawing.Point(77, 104);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuLabel1.Size = new System.Drawing.Size(219, 36);
-            this.bunifuLabel1.TabIndex = 15;
-            this.bunifuLabel1.Text = "هنرستان شهید عسگری";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // label4
             // 
@@ -383,20 +367,7 @@
             this.customValidator1.Icon = ((System.Drawing.Icon)(resources.GetObject("customValidator1.Icon")));
             this.customValidator1.IsValidated = false;
             // 
-            // bunifuLabel4
-            // 
-            this.bunifuLabel4.AutoEllipsis = false;
-            this.bunifuLabel4.CursorType = null;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Freestyle Script", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel4.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bunifuLabel4.Location = new System.Drawing.Point(9, 578);
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuLabel4.Size = new System.Drawing.Size(78, 23);
-            this.bunifuLabel4.TabIndex = 20;
-            this.bunifuLabel4.Text = "SharpITGroup";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+
             // 
             // FormAsset
             // 
@@ -404,8 +375,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(947, 602);
-            this.Controls.Add(this.bunifuLabel4);
-            this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox3);
@@ -461,8 +430,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label3;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private System.Windows.Forms.Label label4;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
     }
 }

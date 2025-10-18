@@ -38,7 +38,6 @@
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateLogin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TimeLogin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -132,24 +131,6 @@
             this.TimeLogin.HeaderText = "ساعت ورود";
             this.TimeLogin.Name = "TimeLogin";
             this.TimeLogin.ReadOnly = true;
-            // 
-            // bunifuLabel4
-            // 
-            this.bunifuLabel4.AutoEllipsis = false;
-            this.bunifuLabel4.CursorType = null;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Stencil", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.bunifuLabel4.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bunifuLabel4.Location = new System.Drawing.Point(96, 162);
-            this.bunifuLabel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuLabel4.Size = new System.Drawing.Size(481, 27);
-            this.bunifuLabel4.TabIndex = 21;
-            this.bunifuLabel4.Text = "طراحی شده توسط فرات بی باک از گروه مهندسی شارپ آی تی";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.bunifuLabel4.Click += new System.EventHandler(this.bunifuLabel4_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnRefresh);
@@ -285,7 +266,6 @@
             this.ClientSize = new System.Drawing.Size(682, 484);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.bunifuLabel4);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Tahoma", 9.25F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -309,7 +289,6 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgLogin;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button button2;

@@ -41,7 +41,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txTitle = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtnumric = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtSize = new System.Windows.Forms.TextBox();
@@ -160,7 +159,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.bunifuLabel4);
             this.groupBox1.Controls.Add(this.txtnumric);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtSize);
@@ -189,18 +187,6 @@
             // 
             // bunifuLabel4
             // 
-            this.bunifuLabel4.AutoEllipsis = false;
-            this.bunifuLabel4.CursorType = null;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Freestyle Script", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel4.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bunifuLabel4.Location = new System.Drawing.Point(-1, 175);
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuLabel4.Size = new System.Drawing.Size(78, 23);
-            this.bunifuLabel4.TabIndex = 79;
-            this.bunifuLabel4.Text = "SharpITGroup";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // txtnumric
             // 
@@ -372,7 +358,6 @@
         private ValidationComponents.RequiredFieldValidator requiredFieldValidator2;
         private ValidationComponents.RequiredFieldValidator requiredFieldValidator3;
         private System.Windows.Forms.TextBox txtnumric;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private ValidationComponents.RequiredFieldValidator requiredFieldValidator4;
     }
 }

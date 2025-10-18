@@ -51,9 +51,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnReports = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.stiReports = new Stimulsoft.Report.StiReport();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReports)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -263,7 +260,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.bunifuLabel1);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.txtFromDate);
             this.groupBox2.Controls.Add(this.label2);
@@ -274,53 +270,6 @@
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "تاریخ گزارش گیری";
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = null;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Stencil", 17.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.bunifuLabel1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bunifuLabel1.Location = new System.Drawing.Point(271, 32);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuLabel1.Size = new System.Drawing.Size(198, 31);
-            this.bunifuLabel1.TabIndex = 18;
-            this.bunifuLabel1.Text = "هنرستان شهید عسگری";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel4
-            // 
-            this.bunifuLabel4.AutoEllipsis = false;
-            this.bunifuLabel4.CursorType = null;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Stencil", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.bunifuLabel4.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bunifuLabel4.Location = new System.Drawing.Point(145, 126);
-            this.bunifuLabel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuLabel4.Size = new System.Drawing.Size(481, 27);
-            this.bunifuLabel4.TabIndex = 22;
-            this.bunifuLabel4.Text = "طراحی شده توسط فرات بی باک از گروه مهندسی شارپ آی تی";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel2
-            // 
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.CursorType = null;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Stencil", 11.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.bunifuLabel2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bunifuLabel2.Location = new System.Drawing.Point(16, 548);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuLabel2.Size = new System.Drawing.Size(135, 21);
-            this.bunifuLabel2.TabIndex = 23;
-            this.bunifuLabel2.Text = "SharpITGroup";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // stiReports
             // 
             this.stiReports.CookieContainer = null;
@@ -348,8 +297,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(760, 564);
-            this.Controls.Add(this.bunifuLabel2);
-            this.Controls.Add(this.bunifuLabel4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvReports);
@@ -394,9 +341,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnReports;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Stimulsoft.Report.StiReport stiReports;
     }
 }
