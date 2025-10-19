@@ -50,6 +50,7 @@
             this.stiReports = new Stimulsoft.Report.StiReport();
             this.requiredFieldValidator1 = new ValidationComponents.RequiredFieldValidator(this.components);
             this.requiredFieldValidator2 = new ValidationComponents.RequiredFieldValidator(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgLogin)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -131,6 +132,7 @@
             this.TimeLogin.HeaderText = "ساعت ورود";
             this.TimeLogin.Name = "TimeLogin";
             this.TimeLogin.ReadOnly = true;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnRefresh);
@@ -258,12 +260,26 @@
             this.requiredFieldValidator2.ErrorMessage = "لطفا کلمه عبور را وارد فرمایید";
             this.requiredFieldValidator2.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator2.Icon")));
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 13.25F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(153, 167);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(417, 22);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "ساخته شده توسط فرات بی باک از گروه شارپ آی تی\r\n";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // LoginManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(682, 484);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -307,5 +323,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateLogin;
         private System.Windows.Forms.DataGridViewTextBoxColumn TimeLogin;
+        private System.Windows.Forms.Label label3;
     }
 }

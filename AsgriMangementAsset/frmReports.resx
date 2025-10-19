@@ -153,15 +153,6 @@
   <metadata name="DateEdit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 1.2px; font-family: 'Stencil'; font-size: 17.75pt; width: 100%; height: 100%; font-style: italic; font-weight: bold; text-decoration: none; color: windowframe; text-align: left; direction: rtl; }</value>
-  </data>
-  <data name="bunifuLabel4.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 1.2px; font-family: 'Stencil'; font-size: 15.75pt; width: 100%; height: 100%; font-style: italic; font-weight: bold; text-decoration: none; color: windowframe; text-align: left; direction: rtl; }</value>
-  </data>
-  <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 1.2px; font-family: 'Stencil'; font-size: 11.75pt; width: 100%; height: 100%; font-style: italic; font-weight: bold; text-decoration: none; color: windowframe; text-align: left; direction: rtl; }</value>
-  </data>
   <metadata name="stiReports.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

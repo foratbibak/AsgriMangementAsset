@@ -29,22 +29,25 @@ namespace AsgriMangementAsset
         private void LoginManagement_Load(object sender, EventArgs e)
         {
             Bindgrid();
-          
-        }
-        private void Bindgrid()
-        {
-            dgLogin.DataSource = loginRepository.SelectAll();
+            ConvertDatesToShamsi();
+
+
         }
         private void ConvertDatesToShamsi()
         {
             foreach (DataGridViewRow row in dgLogin.Rows)
             {
-                if (row.Cells["DateLogin"].Value != null && DateTime.TryParse(row.Cells["Date"].Value.ToString(), out DateTime DateLogin))
+                if (row.Cells["DateLogin"].Value != null && DateTime.TryParse(row.Cells["DateLogin"].Value.ToString(), out DateTime date))
                 {
-                    row.Cells["DateLogin"].Value = DateLogin.ToSahmsi();
+                    row.Cells["DateLogin"].Value = date.ToSahmsi();
                 }
             }
         }
+        private void Bindgrid()
+        {
+            dgLogin.DataSource = loginRepository.SelectAll();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (BaseValidator.IsFormValid(this.components))
@@ -74,7 +77,7 @@ namespace AsgriMangementAsset
         private void button2_Click(object sender, EventArgs e)
         {
             string Name = dgLogin.CurrentRow.Cells[1].Value.ToString();
-            if(MessageBox.Show($"آیا از حذف کاربر {Name}مطمئن هستید","توجه",MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
+            if(RtlMessageBox.Show($"آیا از حذف کاربر {Name}مطمئن هستید","توجه",MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 int UserId = int.Parse(dgLogin.CurrentRow.Cells[0].Value.ToString());
                 loginRepository.Delete(UserId);
@@ -117,6 +120,11 @@ namespace AsgriMangementAsset
 
         private void button3_Click(object sender, EventArgs e)
         {
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

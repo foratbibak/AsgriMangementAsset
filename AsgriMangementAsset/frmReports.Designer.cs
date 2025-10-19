@@ -52,6 +52,10 @@
             this.btnReports = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.stiReports = new Stimulsoft.Report.StiReport();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReports)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -110,7 +114,7 @@
             this.AssetSize,
             this.Date,
             this.DateEdit});
-            this.dgvReports.Location = new System.Drawing.Point(9, 262);
+            this.dgvReports.Location = new System.Drawing.Point(9, 260);
             this.dgvReports.Margin = new System.Windows.Forms.Padding(5);
             this.dgvReports.Name = "dgvReports";
             this.dgvReports.ReadOnly = true;
@@ -270,6 +274,7 @@
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "تاریخ گزارش گیری";
+            // 
             // stiReports
             // 
             this.stiReports.CookieContainer = null;
@@ -291,12 +296,64 @@
             this.stiReports.ScriptLanguage = Stimulsoft.Report.StiReportLanguageType.CSharp;
             this.stiReports.UseProgressInThread = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 18.25F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(460, 125);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(272, 30);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "هنرستان شهید عسگری";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arabic Typesetting", 30F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(9, 119);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(195, 45);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "SharpIT Group";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.label5.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label5.Location = new System.Drawing.Point(377, 544);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(185, 17);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "از گروه مهندسی شارپ آی تی";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.label6.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label6.Location = new System.Drawing.Point(556, 544);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(200, 17);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "ساخته شده توسط  فرات بی باک";
+            // 
             // frmReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(760, 564);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvReports);
@@ -342,5 +399,9 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnReports;
         private Stimulsoft.Report.StiReport stiReports;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
