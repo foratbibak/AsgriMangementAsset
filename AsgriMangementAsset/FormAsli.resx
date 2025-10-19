@@ -117,18 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 1.2px; font-family: 'Stencil'; font-size: 20.75pt; width: 100%; height: 100%; font-style: italic; font-weight: bold; text-decoration: none; color: windowframe; text-align: left; direction: rtl; }</value>
-  </data>
-  <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 1.2px; font-family: 'Stencil'; font-size: 15.75pt; width: 100%; height: 100%; font-style: italic; font-weight: bold; text-decoration: none; color: windowframe; text-align: left; direction: rtl; }</value>
-  </data>
-  <data name="bunifuLabel3.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 1.2px; font-family: 'Stencil'; font-size: 15.75pt; width: 100%; height: 100%; font-style: italic; font-weight: bold; text-decoration: none; color: windowframe; text-align: left; direction: rtl; }</value>
-  </data>
-  <data name="bunifuLabel4.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 1.2px; font-family: 'Sylfaen'; font-size: 18.75pt; width: 100%; height: 100%; font-style: italic; font-weight: bold; text-decoration: none; color: windowframe; text-align: left; direction: rtl; }</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

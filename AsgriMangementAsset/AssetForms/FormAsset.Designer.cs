@@ -60,6 +60,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label4 = new System.Windows.Forms.Label();
             this.customValidator1 = new ValidationComponents.CustomValidator(this.components);
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgAsset)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -347,7 +348,6 @@
             this.label3.Text = "ساخته شده توسط  فرات بی باک";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -367,7 +367,17 @@
             this.customValidator1.Icon = ((System.Drawing.Icon)(resources.GetObject("customValidator1.Icon")));
             this.customValidator1.IsValidated = false;
             // 
-
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 18.25F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label5.Location = new System.Drawing.Point(57, 114);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(272, 30);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "هنرستان شهید عسگری";
             // 
             // FormAsset
             // 
@@ -375,6 +385,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(947, 602);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox3);
@@ -431,5 +442,6 @@
         private System.Windows.Forms.Label label3;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
